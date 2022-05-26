@@ -127,7 +127,8 @@ public class BoardControl{
     
     //returns the index of the blank element in the given board, -1 if not found (impossible case)
     public static int getBlankIndex(byte[] board){
-        for(int i = 0 ; i < board.length ; ++i) if(board[i] == 0) return i;
+        for(int i = 0 ; i < board.length ; ++i)
+            if(board[i] == 0) return i;
         return -1;
     }
     
@@ -199,7 +200,7 @@ public class BoardControl{
     }
     
     //takes an array of byte and makes it into a string and returns the string
-    //used for the hashing, NEVER HASH AN ARRAY IN JAVA
+
     private String make(byte[] arr){
         StringBuilder str = new StringBuilder();
         for (byte b : arr) {
